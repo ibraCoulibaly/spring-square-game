@@ -1,18 +1,21 @@
 package com.square.game;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
+
+import java.util.ArrayList;
+import java.util.Collection;
 
 
 @RestController
 
 public class HeartbeatController {
 
+    @Autowired
+    private GameCatalog gameCatalog;
 
     @Autowired
 
@@ -20,11 +23,17 @@ public class HeartbeatController {
 
     @GetMapping("/heartbeat")
     public int getHeartbeat(){
-        return 40 + (int)(Math.random() * ((230 - 40) +1));
+        return heartbeatSensor.get();
     }
 
-    @PostMapping("/toto")
-    public String responseSomething(@RequestBody String resquestBody) {
-        return resquestBody;
+//    @PostMapping("/toto")
+//    public String responseSomething(@RequestBody String resquestBody) {
+//        return resquestBody;
+//    }
+
+    @GetMapping("/list")
+
+    public Collection<String> getGameIdentifiers() {
+        return gameCatalog.getGameIdentifiers();
     }
 }
