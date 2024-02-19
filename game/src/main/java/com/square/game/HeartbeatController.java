@@ -26,14 +26,15 @@ public class HeartbeatController {
         return heartbeatSensor.get();
     }
 
-//    @PostMapping("/toto")
-//    public String responseSomething(@RequestBody String resquestBody) {
-//        return resquestBody;
-//    }
+    @PostMapping("/toto")
+    public String responseSomething(@RequestBody String resquestBody) {
+        return resquestBody;
+    }
 
     @GetMapping("/list")
 
     public Collection<String> getGameIdentifiers() {
         return gameCatalog.getGameIdentifiers();
     }
+
 }

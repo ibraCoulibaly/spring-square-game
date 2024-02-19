@@ -1,7 +1,12 @@
 package com.square.game;
 
+import fr.le_campus_numerique.square_games.engine.Game;
+import fr.le_campus_numerique.square_games.engine.GameFactory;
+import fr.le_campus_numerique.square_games.engine.tictactoe.TicTacToeGame;
 import fr.le_campus_numerique.square_games.engine.tictactoe.TicTacToeGameFactory;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -13,7 +18,17 @@ public class GameCatalogDummyImpl implements GameCatalog{
 
     @Override
     public Collection<String> getGameIdentifiers() {
-        //return Collections.singleton(ticTacToeGameFactory.getGameId());
         return List.of(ticTacToeGameFactory.getGameId());
     }
+
+    @Override
+    public GameFactory getFactoryById(String id) {
+        switch(id){
+            case "tictactoe": return ticTacToeGameFactory;
+
+        }
+        default:  null;
+    }
+
+
 }
