@@ -1,8 +1,5 @@
 package com.square.game;
 
-public record GameDTO(
-         String gameType,
-         int playerCount,
-         int boardSize
-) {
+public record GameDTO(String typeGame, int playerCount, int boardSize) {
+
 }
