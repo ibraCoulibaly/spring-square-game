@@ -1,12 +1,11 @@
 package com.square.game;
 
-import fr.le_campus_numerique.square_games.engine.Game;
 import fr.le_campus_numerique.square_games.engine.GameFactory;
-import fr.le_campus_numerique.square_games.engine.tictactoe.TicTacToeGame;
+import fr.le_campus_numerique.square_games.engine.connectfour.ConnectFourGameFactory;
+import fr.le_campus_numerique.square_games.engine.taquin.TaquinGameFactory;
 import fr.le_campus_numerique.square_games.engine.tictactoe.TicTacToeGameFactory;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -15,6 +14,8 @@ import java.util.List;
 public class GameCatalogDummyImpl implements GameCatalog{
 
     TicTacToeGameFactory ticTacToeGameFactory = new TicTacToeGameFactory();
+    ConnectFourGameFactory connectFourGameFactory = new ConnectFourGameFactory();
+    TaquinGameFactory taquinGameFactory  = new TaquinGameFactory();
 
     @Override
     public Collection<String> getGameIdentifiers() {
@@ -23,11 +24,13 @@ public class GameCatalogDummyImpl implements GameCatalog{
 
     @Override
     public GameFactory getFactoryById(String id) {
-        switch(id){
-            case "tictactoe": return ticTacToeGameFactory;
+        return switch (id) {
+            case "tictactoe" -> ticTacToeGameFactory;
+            case "connectfour" -> connectFourGameFactory;
+            case "taquin" -> taquinGameFactory;
+            default -> ticTacToeGameFactory;
+        };
 
-        }
-        default:  null;
     }
 
 
