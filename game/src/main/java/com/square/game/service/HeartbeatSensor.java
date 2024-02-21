@@ -1,4 +1,4 @@
-package com.square.game;
+package com.square.game.service;
 
 
 public interface HeartbeatSensor {

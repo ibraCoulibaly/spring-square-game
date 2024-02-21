@@ -1,4 +1,4 @@
-package com.square.game;
+package com.square.game.controller;
 
 import fr.le_campus_numerique.square_games.engine.GameFactory;
 

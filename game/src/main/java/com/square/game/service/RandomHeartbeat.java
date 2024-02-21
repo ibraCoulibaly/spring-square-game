@@ -1,9 +1,10 @@
-package com.square.game;
+package com.square.game.service;
 
+import com.square.game.service.HeartbeatSensor;
 import org.springframework.stereotype.Service;
 
 @Service
-public class RandomHeartbeat  implements HeartbeatSensor{
+public class RandomHeartbeat  implements HeartbeatSensor {
     @Override
     public int get() {
         return 40 + (int)(Math.random() * ((230 - 40) +1));
