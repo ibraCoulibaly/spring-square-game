@@ -12,14 +12,10 @@ import java.util.Collection;
 
 
 @RestController
-
 public class HeartbeatController {
-
     @Autowired
     private GameCatalog gameCatalog;
-
     @Autowired
-
     private HeartbeatSensor heartbeatSensor;
 
     @GetMapping("/heartbeat")
@@ -33,7 +29,6 @@ public class HeartbeatController {
     }
 
     @GetMapping("/list")
-
     public Collection<String> getGameIdentifiers() {
         return gameCatalog.getGameIdentifiers();
     }

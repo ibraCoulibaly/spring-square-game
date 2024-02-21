@@ -9,9 +9,5 @@ import java.util.Collection;
 public interface GameCatalog {
 
     Collection<String> getGameIdentifiers();
-    GameFactory getFactoryById(String id);
 
-    GameDTO getGameDTO(GameCreationParams params);
-
-    GameDTO getGameById(String gameId);
 }

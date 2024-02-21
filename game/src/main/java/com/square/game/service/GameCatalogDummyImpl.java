@@ -16,14 +16,9 @@ import java.util.Map;
 
 @Service
 
-public class GameCatalogDummyImpl implements GameCatalog{
+public class GameCatalogDummyImpl implements GameCatalog {
 
     private final TicTacToeGameFactory ticTacToeGameFactory = new TicTacToeGameFactory();
-    private final ConnectFourGameFactory connectFourGameFactory = new ConnectFourGameFactory();
-    private final TaquinGameFactory taquinGameFactory  = new TaquinGameFactory();
-
-    private final Map<String, Game> gameMap = new HashMap<>();
-
 
 
     @Override
@@ -31,29 +26,7 @@ public class GameCatalogDummyImpl implements GameCatalog{
         return List.of(ticTacToeGameFactory.getGameFactoryId());
     }
 
-    @Override
-    public GameFactory getFactoryById(String id) {
-        return switch (id) {
-            case "tictactoe" -> ticTacToeGameFactory;
-            case "connectfour" -> connectFourGameFactory;
-            case "taquin" -> taquinGameFactory;
-            default -> ticTacToeGameFactory;
-        };
 
-    }
-    @Override
-    public GameDTO getGameDTO(GameCreationParams params) {
-        GameFactory gameFactory = getFactoryById(params.getTypeGame());
-        Game saveGamesFactory = gameFactory.createGame(params.getPlayerCount(), params.getBoardSize());
-        gameMap.put(saveGamesFactory.getId().toString(), saveGamesFactory);
-        return new GameDTO(saveGamesFactory.getId().toString(), params.getPlayerCount(), params.getBoardSize());
-    }
-
-    @Override
-    public GameDTO getGameById(String gameId) {
-        Game game = gameMap.get(gameId);
-        return new GameDTO(game.getId().toString(), game.getPlayerIds().size(), game.getBoardSize());
-    }
 
 
 }

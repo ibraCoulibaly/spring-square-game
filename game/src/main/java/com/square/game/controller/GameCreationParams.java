@@ -1,7 +1,5 @@
 package com.square.game.controller;
 
-import fr.le_campus_numerique.square_games.engine.GameFactory;
-
 public class GameCreationParams {
     private String typeGame;
     private int playerCount;

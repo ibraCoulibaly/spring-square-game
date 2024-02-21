@@ -1,6 +1,5 @@
 package com.square.game.service;
 
-import com.square.game.service.HeartbeatSensor;
 import org.springframework.stereotype.Service;
 
 @Service
