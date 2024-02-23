@@ -3,8 +3,7 @@ package com.square.game.controller;
 import com.square.game.controller.dto.GameDTO;
 
 import com.square.game.plugin.GamePlugin;
-import com.square.game.service.partiegame.GameService;
-import fr.le_campus_numerique.square_games.engine.Game;
+import com.square.game.service.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 
@@ -22,10 +21,9 @@ public class GameCotroller {
     private List<GamePlugin> gamePlugin;
 
     @GetMapping("/games2")
-    public Collection<GamePlugin> getIdAfterCreate(){
+    public Collection<GamePlugin> getListGamePlugin(){
         return gamePlugin;
     }
-
 
 
     @PostMapping("/games2/{game2Id}")

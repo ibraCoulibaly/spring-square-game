@@ -1,4 +1,4 @@
-package com.square.game.service.partiegame;
+package com.square.game.service;
 
 import com.square.game.controller.GameCreationParams;
 import com.square.game.controller.dto.GameDTO;

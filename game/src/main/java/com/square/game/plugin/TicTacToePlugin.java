@@ -31,7 +31,7 @@ public class TicTacToePlugin implements GamePlugin {
 
     @Override
     public String getName(Locale locale) {
-        return messageSource.getMessage("tic", null, locale)+ " " + nbPlayer;
+        return messageSource.getMessage("tic", null, locale);
     }
 
     @Override

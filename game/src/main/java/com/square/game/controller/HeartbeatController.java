@@ -22,8 +22,7 @@ public class HeartbeatController {
     public int getHeartbeat(){
         return heartbeatSensor.get();
     }
-
-    @PostMapping("/somthing")
+    @PostMapping("/user")
     public String responseSomething(@RequestBody String resquestBody) {
         return resquestBody;
     }
