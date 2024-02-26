@@ -1,10 +1,6 @@
 package com.square.game.dao.user;
 
-
-
-
 public class User {
-
     private int id;
 
     private String lastName;
@@ -14,11 +10,10 @@ public class User {
     private int age;
 
     public User(int id, String lastName, String firstName, int age){
-        this.id = id;
+        this.id = id; //+ (int)(Math.random() * ((247 - id) +1));
         this.lastName = lastName;
         this.firstName = firstName;
         this.age = age;
-
     }
 
 

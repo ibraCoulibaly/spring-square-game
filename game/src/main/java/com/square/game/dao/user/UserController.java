@@ -10,22 +10,30 @@ import java.util.*;
 @RestController
 public class UserController {
     @Autowired
-    UserDAO userDAO;
-
-    private final Map<String, User> userMap = new HashMap<>();
-    private final ArrayList<User> listUser = new ArrayList<>();
-
+    private  UserDAO userDAO;
     @PostMapping("/users")
-    public UserDTO createUser(@RequestBody UserCreationParam params){
-        return userDAO.getUserDTO(params);
+    public UserDTO createUserDTO(@RequestBody UserCreationParam params){
+        userDAO.getAllUsers().add(userDAO.createUserDTO(params));
+        return userDAO.createUserDTO(params);
     }
-    @GetMapping("/list")
-    public Collection<UserDAO> getListUser(int params){
-        return null;
+    @GetMapping("/listUsers")
+    public Collection<UserDTO> getListUser(){
+        return userDAO.getAllUsers();
+    }
+    @GetMapping("/listUsers/{usreId}")
+    public UserDTO getUser(@PathVariable int usreId){
+        return userDAO.getUserById(usreId);
+    }
+    @DeleteMapping("/listUsers/sup/{usrId}")
+    public Collection<UserDTO> supUser(@RequestBody UserCreationParam params){
+        userDAO.deleteUser(params.id());
+        return getListUser();
     }
 
-    @GetMapping("/users/{name}")
-    public UserDTO getUser(@PathVariable String name){
-        return null;
-    }
+//    @PutMapping("/listUsers/up/{usrId}")
+//    public Collection<UserDTO> updUser(@PathVariable int userId,  @RequestBody UserCreationParam params){
+//        UserDTO user = userDAO.getUserById(userId);
+//        return getListUser();
+//    }
+
 }
