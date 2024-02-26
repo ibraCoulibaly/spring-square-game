@@ -1,7 +1,7 @@
 package com.square.game.controller;
 
 import com.square.game.service.HeartbeatSensor;
-import com.square.game.service.GameCatalog;
+import com.square.game.service.game.GameCatalog;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;

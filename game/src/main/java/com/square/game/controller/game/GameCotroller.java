@@ -1,9 +1,9 @@
-package com.square.game.controller;
+package com.square.game.controller.game;
 
 import com.square.game.controller.dto.GameDTO;
 
 import com.square.game.plugin.GamePlugin;
-import com.square.game.service.GameService;
+import com.square.game.service.game.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 

@@ -1,4 +1,4 @@
-package com.square.game.controller;
+package com.square.game.controller.game;
 
 public class GameCreationParams {
     private String typeGame;

@@ -1,4 +1,4 @@
-package com.square.game.service;
+package com.square.game.service.game;
 
 import com.square.game.controller.dto.GameDTO;
 import com.square.game.plugin.GamePlugin;
@@ -17,8 +17,6 @@ public class GameServiceImpl implements GameService {
         Game game = gameMap.get(gameId);
         return new GameDTO(game.getId().toString(), game.getPlayerIds().size(), game.getBoardSize());
     }
-
-
 
     @Override
     public GameDTO createGameWithPlugin(GamePlugin plugin) {
