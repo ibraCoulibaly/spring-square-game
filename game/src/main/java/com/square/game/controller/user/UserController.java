@@ -11,34 +11,33 @@ import java.util.*;
 @RestController
 public class UserController {
     @Autowired
-    //@Qualifier("sqlUserDAO")
+    @Qualifier("userDAOImpl")
     private  UserDAO userDAO;
     @PostMapping("/users")
     public UserDTO createUserDTO(@RequestBody UserCreationParam params){
         User user = userDAO.createUser(params);
-        userDAO.addUser(user);
+        userDAO.getAllUsers().add(user);
         return User.toUserDTO(user);
     }
     @GetMapping("/listUsers")
     public Collection<UserDTO> getListUser(){
         return userDAO.getAllUsers().stream().map(User::toUserDTO).toList();
-        //return userDAO.getAllUsers(user);
     }
     @GetMapping("/listUsers/{userId}")
-    public UserDTO getUser(@PathVariable int userId){
+    public UserDTO getUser(@PathVariable UUID userId){
         User user = userDAO.getUserById(userId);
         return User.toUserDTO(user);
     }
     @DeleteMapping("/listUsers/sup/{userId}")
-    public Collection<UserDTO> supUser(@PathVariable int userId){
+    public Collection<UserDTO> supUser(@PathVariable UUID userId){
         userDAO.deleteUser(userId);
         return getListUser();
     }
-    @PutMapping("/listUsers/up")
-    public UserDTO upUser(@RequestBody User user){
-        userDAO.updateUser(user);
-        return User.toUserDTO(user);
+    @PutMapping("/listUsers/up/{userId}")
+    public UserDTO upUser(@PathVariable UUID userId, @RequestBody User user){
+        User user1 = userDAO.updateUser(userId, user);
+        user1.setId(userId);
+        return User.toUserDTO(user1);
     }
-
 
 }
