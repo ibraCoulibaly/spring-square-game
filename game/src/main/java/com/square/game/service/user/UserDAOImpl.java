@@ -20,11 +20,7 @@ public class UserDAOImpl implements UserDAO {
     public User getUserDTO(UserCreationParam params) {
         return createUser(params);
     }
-    @Override
-    public User createUser(int id, String firstName, String lastName, int age) {
-        int idRamdom = id+ (int)(Math.random() * ((247 - id) +1));
-        return new User(id, firstName, lastName, age);
-    }
+
     @Override
     public User getUserById(int id) {
         return getAllUsers().stream().filter(e -> e.getId() == id).toList().getFirst();

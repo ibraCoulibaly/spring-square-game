@@ -4,10 +4,9 @@ import com.square.game.controller.user.User;
 import com.square.game.controller.user.UserCreationParam;
 import java.util.List;
 
-public interface UserDAO {
+public interface UserDAO{
     List<User> getAllUsers();
     User getUserDTO(UserCreationParam params);
-    User createUser(int id, String firstName, String lastName, int age);
     User createUser(UserCreationParam params);
     User getUserById(int id);
     void addUser(User user);
