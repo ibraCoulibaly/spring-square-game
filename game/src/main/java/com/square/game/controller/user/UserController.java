@@ -1,6 +1,6 @@
 package com.square.game.controller.user;
 
-import com.square.game.service.user.dao.UserDAO;
+import com.square.game.controller.user.dao.UserDAO;
 import com.square.game.controller.dto.UserDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -14,9 +14,8 @@ public class UserController {
     @Qualifier("userDAOImpl")
     private  UserDAO userDAO;
     @PostMapping("/users")
-    public UserDTO createUserDTO(@RequestBody UserCreationParam params){
-        User user = userDAO.createUser(params);
-        userDAO.getAllUsers().add(user);
+    public UserDTO createUserDTO(@RequestBody User user){
+        userDAO.addUser(user);
         return User.toUserDTO(user);
     }
     @GetMapping("/listUsers")

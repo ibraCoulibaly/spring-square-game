@@ -1,4 +1,4 @@
-package com.square.game.service.user.dao;
+package com.square.game.controller.user.dao;
 
 import com.square.game.controller.dto.UserDTO;
 import com.square.game.controller.user.User;
@@ -8,7 +8,6 @@ import java.util.UUID;
 
 public interface UserDAO{
     List<User> getAllUsers();
-    User createUser(UserCreationParam params);
     User getUserById(UUID id);
     void addUser(User user);
     void deleteUser(UUID id);

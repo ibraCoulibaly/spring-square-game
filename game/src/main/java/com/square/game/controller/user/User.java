@@ -10,28 +10,18 @@ public class User {
     private String lastName;
 
     private String firstName;
-
     private int age;
 
     public User(){
 
     }
 
-    public User(UUID id, String lastName, String firstName, int age){
-        this.id = id;
-        this.lastName = lastName;
-        this.firstName = firstName;
-        this.age = age;
-    }
-
-    public User( String lastName, String firstName, int age){
+    public User( String firstName, String lastName,  int age){
         this.id = UUID.randomUUID();
         this.lastName = lastName;
         this.firstName = firstName;
         this.age = age;
     }
-
-
 
     public UUID getId() {
         return id;
