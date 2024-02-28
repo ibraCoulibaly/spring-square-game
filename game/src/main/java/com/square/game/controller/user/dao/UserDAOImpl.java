@@ -19,13 +19,11 @@ public class UserDAOImpl implements UserDAO {
     }
     @Override
     public void addUser(User user) {
-        User user1 = new User(user.getFirstName(), user.getLastName(), user.getAge());
-        listUser.add(user1);
+        listUser.add(new User(user.getFirstName(), user.getLastName(), user.getAge()));
     }
     @Override
     public void deleteUser(UUID id) {
-        User user = listUser.stream().filter(e->e.getId().equals(id)).toList().getFirst();
-        listUser.remove(user);
+        listUser.remove(listUser.stream().filter(e->e.getId().equals(id)).toList().getFirst());
     }
     @Override
     public User updateUser(UUID id, User user) {

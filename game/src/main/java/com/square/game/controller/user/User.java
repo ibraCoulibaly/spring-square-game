@@ -1,10 +1,15 @@
 package com.square.game.controller.user;
 
 import com.square.game.controller.dto.UserDTO;
+import jakarta.persistence.*;
 
 import java.util.UUID;
 
+@Entity
+@Table(name="User")
 public class User {
+    @Id
+    @GeneratedValue(strategy= GenerationType.UUID)
     private UUID id;
 
     private String lastName;
