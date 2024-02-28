@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
+import java.util.UUID;
 
 
 @RestController
@@ -28,26 +29,29 @@ public class UserController {
     }
     @GetMapping("/listUsers")
     public Collection<UserDTO> getListUser(){
-        //return userRepository.findAll().stream().map(User::toUserDTO).toList();
-        userRepository.findAll().forEach(User::toUserDTO);
-        return null;
+        return userRepository.findAll().stream().map(User::toUserDTO).toList();
+
     }
-//    @GetMapping("/listUsers/{userId}")
-//    public UserDTO getUser(@PathVariable UUID userId){
-//        User user = userRepository.findAllById(userId);//.getReferenceById(userId);
-//        return User.toUserDTO(user);
-//    }
-//    @DeleteMapping("/listUsers/sup/{userId}")
-//    public Collection<UserDTO> supUser(@PathVariable UUID userId){
-//        userRepository.deleteAllById(userId);
-//        return getListUser();
-//    }
-//    @PutMapping("/listUsers/up/{userId}")
-//    public UserDTO upUser(@PathVariable UUID userId, @RequestBody User user){
-//        User user1 = userRepository.save (user);
-//        user1.setId(userId);
-//        return User.toUserDTO(user1);
-//    }
+    @GetMapping("/listUsers/{userId}")
+    public UserDTO getUser(@PathVariable UUID userId){
+        User user = userRepository.getReferenceById(userId);
+        return User.toUserDTO(user);
+    }
+    @DeleteMapping("/listUsers/sup/{userId}")
+    public Collection<UserDTO> supUser(@PathVariable UUID userId){
+        userRepository.deleteById(userId);
+        return getListUser();
+    }
+    @PutMapping("/listUsers/up/{userId}")
+    public UserDTO upUser(@PathVariable UUID userId, @RequestBody UserCreationParam param){
+        User user = userRepository.getReferenceById(userId);
+        user.setId(userId);
+        user.setFirstName(param.firstName());
+        user.setLastName(param.lastName());
+        user.setAge(param.age());
+        userRepository.save(user);
+        return User.toUserDTO(user);
+    }
 
     /*@PostMapping("/users")
     public UserDTO createUserDTO(@RequestBody User user){

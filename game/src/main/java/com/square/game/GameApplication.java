@@ -11,7 +11,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 
-@EnableJpaRepositories("com.square.game.repository")
+//@EnableJpaRepositories("com.square.game.repository")
 @SpringBootApplication
 
 public class GameApplication  {
