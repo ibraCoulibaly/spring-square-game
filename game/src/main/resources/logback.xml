@@ -1,0 +1,16 @@
+<configuration>
+    // Pattern de présentation du log
+    <appender name="File" class="ch.qos.logback.core.FileAppender">
+        <file>C:\Users\ibrahima.coulibaly\Documents/fichier.log</file>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+<!--    // Niveau de journalisation personnalisé pour tous les packages “fr.”-->
+<!--    <logger name="fr" level="debug" additivity="false">-->
+<!--        <appender-ref ref="CONSOLE"/>-->
+<!--    </logger>-->
+    <root level="debug"> // Niveau de journalisation par défaut
+        <appender-ref ref="File"/>
+    </root>
+</configuration>
