@@ -22,38 +22,6 @@ public class UserController {
     private UserDAO userDAO;
 
     @PostMapping("/users")
-    public UserDTO createUserDTO(@RequestBody UserCreationParam param){
-        User user1 = new User(param.firstName(), param.lastName(), param.age());
-        userRepository.save(user1);
-        return User.toUserDTO(user1);
-    }
-    @GetMapping("/listUsers")
-    public Collection<UserDTO> getListUser(){
-        return userRepository.findAll().stream().map(User::toUserDTO).toList();
-
-    }
-    @GetMapping("/listUsers/{userId}")
-    public UserDTO getUser(@PathVariable UUID userId){
-        User user = userRepository.getReferenceById(userId);
-        return User.toUserDTO(user);
-    }
-    @DeleteMapping("/listUsers/sup/{userId}")
-    public Collection<UserDTO> supUser(@PathVariable UUID userId){
-        userRepository.deleteById(userId);
-        return getListUser();
-    }
-    @PutMapping("/listUsers/up/{userId}")
-    public UserDTO upUser(@PathVariable UUID userId, @RequestBody UserCreationParam param){
-        User user = userRepository.getReferenceById(userId);
-        user.setId(userId);
-        user.setFirstName(param.firstName());
-        user.setLastName(param.lastName());
-        user.setAge(param.age());
-        userRepository.save(user);
-        return User.toUserDTO(user);
-    }
-
-    /*@PostMapping("/users")
     public UserDTO createUserDTO(@RequestBody User user){
         userDAO.addUser(user);
         return User.toUserDTO(user);
@@ -77,12 +45,38 @@ public class UserController {
         User user1 = userDAO.updateUser(userId, user);
         user1.setId(userId);
         return User.toUserDTO(user1);
-    }*/
+    }
 
     /*--------------------------------------------------------
     * Controller to test Repository
     *---------------------------------------------------------*/
 
+
+    @PostMapping("/usersRepo")
+    public UserDTO createUserDTOForRepo(@RequestBody UserCreationParam param){
+        User user1 = new User(param.firstName(), param.lastName(), param.age());
+        userRepository.save(user1);
+        return User.toUserDTO(user1);
+    }
+    @GetMapping("/listUsersRepo")
+    public Collection<UserDTO> getListUserForRepo(){
+        return userRepository.findAll().stream().map(User::toUserDTO).toList();
+
+    }
+    @GetMapping("/listUsersRepo/{userId}")
+    public UserDTO getUserForRepo(@PathVariable UUID userId){
+        User user = userRepository.getReferenceById(userId);
+        return User.toUserDTO(user);
+    }
+    @DeleteMapping("/listUsersRepo/sup/{userId}")
+    public Collection<UserDTO> supUserForRepo(@PathVariable UUID userId){
+        userRepository.deleteById(userId);
+        return getListUserForRepo();
+    }
+    @PutMapping("/listUsersRepo/up/{userId}")
+    public UserDTO updateUserForRepo(@PathVariable UUID userId, @RequestBody UserCreationParam param){
+        return User.toUserDTO(userRepository.updateUserForRepoImpl(userId, param));
+    }
 
 
 }
