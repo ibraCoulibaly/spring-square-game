@@ -56,6 +56,12 @@
             <version>3.1.0</version>
         </dependency>
 
+		<dependency>
+			<groupId>org.hibernate.validator</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>6.2.0.Final</version> <!-- Assurez-vous de spécifier la dernière version -->
+		</dependency>
+
 	</dependencies>
 
 	<build>

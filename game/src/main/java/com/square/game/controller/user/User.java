@@ -8,8 +8,8 @@ import java.util.UUID;
 @Entity
 @Table(name="User")
 public class User {
-    @Id
-    @GeneratedValue(strategy= GenerationType.UUID)
+    @Id//cle primaire
+    @GeneratedValue(strategy= GenerationType.UUID)//
     private UUID id;
 
     private String lastName;

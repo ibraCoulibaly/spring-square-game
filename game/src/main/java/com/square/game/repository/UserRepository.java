@@ -14,9 +14,9 @@ public interface UserRepository extends JpaRepository<User, UUID> {
     default User updateUserForRepoImpl(UUID userId, UserCreationParam param){
         User user = getReferenceById(userId);
         user.setId(userId);
-        user.setFirstName(param.firstName());
-        user.setLastName(param.lastName());
-        user.setAge(param.age());
+        user.setFirstName(param.getFirstName());
+        user.setLastName(param.getLastName());
+        user.setAge(param.getAge());
         save(user);
         return user;
     }
