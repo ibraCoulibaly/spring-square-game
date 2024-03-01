@@ -1,0 +1,4 @@
+11:06:53.416 [http-nio-8080-exec-4] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+11:06:53.416 [http-nio-8080-exec-4] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+11:06:53.418 [http-nio-8080-exec-4] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+11:06:53.513 [http-nio-8080-exec-4] INFO  com.sun.tools.javac.Main - User ajouter

@@ -5,12 +5,18 @@ package com.square.game.controller.user;
 import com.fasterxml.jackson.databind.ser.FilterProvider;
 import com.fasterxml.jackson.databind.ser.impl.SimpleBeanPropertyFilter;
 import com.fasterxml.jackson.databind.ser.impl.SimpleFilterProvider;
+
+
+
 import com.square.game.controller.dto.UserDTO;
 
 import com.square.game.controller.product.Product;
 import com.square.game.controller.product.ProductDAO;
 import com.square.game.controller.user.dao.UserDAO;
 import com.square.game.repository.UserRepository;
+import com.sun.tools.javac.Main;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -32,14 +38,17 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
     @Autowired
-    @Qualifier("sqlUserDAO")
+    @Qualifier("userDAOImpl")
     private UserDAO userDAO;
     @Autowired
     private ProductDAO productDao;
+    private static final Logger LOGGER = LoggerFactory.getLogger(Main.class);
+
 
     @PostMapping("/users")
     public UserDTO createUserDTO(@RequestBody User user){
         userDAO.addUser(user);
+        LOGGER.info("User ajouter");
         return User.toUserDTO(user);
     }
     @GetMapping("/listUsers")
