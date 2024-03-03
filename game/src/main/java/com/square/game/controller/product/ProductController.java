@@ -18,7 +18,7 @@ public class ProductController {
     private ProductDAO productDao;
 
     //Récupérer la liste des produits
-    @RequestMapping(value = "/Produits", method = RequestMethod.GET)
+    @RequestMapping(value = "/ProduitsList", method = RequestMethod.GET)
 
     public MappingJacksonValue listeProduits() {
 
@@ -43,7 +43,7 @@ public class ProductController {
     }
 
     //ajouter un produit
-    @PostMapping(value = "/Produits")
+    @PostMapping(value = "/ad/Produits")
     public ResponseEntity<Void> ajouterProduit(@RequestBody Product product) {
         Product productAdded =  productDao.save(product);
 
@@ -61,12 +61,12 @@ public class ProductController {
         return productDao.findByPrixGreaterThan(400);
     }
 
-    @DeleteMapping (value = "/Produits/{id}")
+    @DeleteMapping (value = "/sup/Produits/{id}")
     public void supprimerProduit(@PathVariable int id) {
         productDao.deleteById(id);
     }
 
-    @PutMapping (value = "/Produits")
+    @PutMapping (value = "/up/Produits")
     public void updateProduit(@RequestBody Product product) {
         productDao.save(product);
 
