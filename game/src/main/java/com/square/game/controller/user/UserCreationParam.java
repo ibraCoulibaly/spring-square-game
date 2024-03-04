@@ -9,11 +9,10 @@ import java.util.UUID;
 
 
 public class UserCreationParam {
-    @NotBlank
     private String firstName;
-    @NotBlank
+
     private String lastName;
-    @NotBlank
+
     private int age;
 
     public String getFirstName() {
