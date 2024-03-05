@@ -2,17 +2,14 @@ package com.square.game.controller.user;
 
 import com.square.game.controller.dto.UserDTO;
 import jakarta.persistence.*;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
 
-import java.util.Collection;
 import java.util.UUID;
 
 @Entity
 @Table(name="User")
-public class User implements UserDetails {
-    @Id//cle primaire
-    @GeneratedValue(strategy= GenerationType.UUID)//
+public class User {
+    @Id
+    @GeneratedValue(strategy= GenerationType.UUID)
     private UUID id;
 
     private String lastName;
@@ -78,38 +75,5 @@ public class User implements UserDetails {
         return new User(userDTO.firstName(), userDTO.lastName(), userDTO.age());
     }
 
-    @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
-    }
 
-    @Override
-    public String getPassword() {
-        return password;
-    }
-
-    @Override
-    public String getUsername() {
-        return username;
-    }
-
-    @Override
-    public boolean isAccountNonExpired() {
-        return true;
-    }
-
-    @Override
-    public boolean isAccountNonLocked() {
-        return true;
-    }
-
-    @Override
-    public boolean isCredentialsNonExpired() {
-        return true;
-    }
-
-    @Override
-    public boolean isEnabled() {
-        return true;
-    }
 }

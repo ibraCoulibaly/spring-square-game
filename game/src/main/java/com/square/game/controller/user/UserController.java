@@ -3,7 +3,6 @@ package com.square.game.controller.user;
 import com.square.game.controller.dto.UserDTO;
 
 import com.square.game.controller.user.dao.UserDAO;
-import com.square.game.controller.user.security.AuthentificationDTO;
 import com.square.game.repository.UserRepository;
 import com.sun.tools.javac.Main;
 import jakarta.validation.Valid;
@@ -12,14 +11,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
-import java.util.Map;
 import java.util.UUID;
+
 
 
 @RestController
@@ -29,7 +25,7 @@ public class UserController {
     @Autowired
     @Qualifier("userDAOImpl")
     private UserDAO userDAO;
-    private AuthenticationManager authenticationManager;
+
     private static final Logger LOGGER = LoggerFactory.getLogger(Main.class);
 
     @PostMapping("/users")
@@ -59,20 +55,7 @@ public class UserController {
         return User.toUserDTO(user1);
     }
 
-    /*--------------------------------------------------------
-     * Spring security
-     *---------------------------------------------------------*/
 
-    @PostMapping (value = "/connexion")
-    public Map<String, String> connexion(@RequestBody AuthentificationDTO param) {
-        Authentication authenticated = authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(param.username(), param.password())
-        );
-        LOGGER.info("result {}", authenticated.isAuthenticated());
-        return null;
-
-
-    }
 
     /*--------------------------------------------------------
     * Controller to test Repository

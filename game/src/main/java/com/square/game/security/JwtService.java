@@ -1,4 +1,4 @@
-package com.square.game.controller.user.security;
+package com.square.game.security;
 
 import org.springframework.stereotype.Service;
 

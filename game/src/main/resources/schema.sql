@@ -11,3 +11,4 @@ CREATE TABLE product
     prix_achat INT
 
 );
+
