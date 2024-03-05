@@ -1,4 +1,4 @@
-package com.square.game.repository;
+/*package com.square.game.repository;
 
 import com.square.game.controller.user.User;
 
@@ -26,4 +26,4 @@ public interface UserRepository extends JpaRepository<User, UUID> {
 
 
 
-}
+}*/

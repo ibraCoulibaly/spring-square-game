@@ -14,9 +14,9 @@ public class UtilisateurController {
     private UtilisateurService utilisateurService;
     //private AuthenticationManager authenticationManager;
 
-    @PostMapping("/inscription")
+    @PostMapping("/subscribe")
     public void inscription(@RequestBody UtilisateurDTO utilisateurDTO){
-        log.info("inscription is worked");
+        //log.info("inscription is worked");
         this.utilisateurService.subscribe(Utilisateur.toUser(utilisateurDTO));
     }
 

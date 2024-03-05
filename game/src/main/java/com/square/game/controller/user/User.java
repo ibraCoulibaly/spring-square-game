@@ -5,16 +5,14 @@ import jakarta.persistence.*;
 
 import java.util.UUID;
 
-@Entity
+//@Entity
 @Table(name="User")
 public class User {
     @Id
-    @GeneratedValue(strategy= GenerationType.UUID)
+    //@GeneratedValue(strategy= GenerationType.UUID)
     private UUID id;
 
     private String lastName;
-    private String username;
-    private String password;
     private String firstName;
     private int age;
 
@@ -60,13 +58,6 @@ public class User {
         this.age = age;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
 
     public static UserDTO toUserDTO(User user){
         return new UserDTO(user.getId(), user.getFirstName(), user.getLastName(), user.getAge());

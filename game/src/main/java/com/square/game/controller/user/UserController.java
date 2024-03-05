@@ -1,4 +1,4 @@
-package com.square.game.controller.user;
+/*package com.square.game.controller.user;
 
 import com.square.game.controller.dto.UserDTO;
 
@@ -62,7 +62,7 @@ public class UserController {
     *---------------------------------------------------------*/
 
 
-    @PostMapping("/usersRepo")
+   /* @PostMapping("/usersRepo")
     public UserDTO createUserDTOForRepo(@Valid @RequestBody UserCreationParam param){
         User user1 = new User(param.getFirstName(), param.getLastName(), param.getAge());
         userRepository.save(user1);
@@ -87,7 +87,7 @@ public class UserController {
         return User.toUserDTO(userRepository.updateUserForRepoImpl(userId, param));
     }
 
-}
+}*/
 
 
 

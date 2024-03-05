@@ -1,11 +1,10 @@
 package com.square.game.security;
 
 import com.square.game.controller.dto.UserDTO;
-import com.square.game.controller.user.User;
+
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
+
 import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -13,9 +12,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Collection;
 import java.util.UUID;
 
-@Getter
-@Setter
-@AllArgsConstructor
+
 @Entity
 @Table(name="utilisateur")
 public class Utilisateur implements UserDetails {
@@ -29,6 +26,27 @@ public class Utilisateur implements UserDetails {
 
     }
 
+    public Utilisateur(int id, String username, String password) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
