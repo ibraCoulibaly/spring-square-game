@@ -1,16 +1,12 @@
-package com.square.game.security;
+package com.square.game.security.entity;
 
-import com.square.game.controller.dto.UserDTO;
-
+import com.square.game.security.controller.UtilisateurDTO;
 import jakarta.persistence.*;
-import lombok.Getter;
 
-import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
-import java.util.UUID;
 
 
 @Entity

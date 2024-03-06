@@ -1,4 +1,4 @@
-package com.square.game.config;
+package com.square.game.security.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
