@@ -8,6 +8,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
 
 import java.util.Collection;
 import java.util.UUID;
@@ -17,7 +18,7 @@ import java.util.UUID;
 @Table(name="utilisateur")
 public class Utilisateur implements UserDetails {
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String username;
     private String password;
@@ -30,6 +31,12 @@ public class Utilisateur implements UserDetails {
         this.id = id;
         this.username = username;
         this.password = password;
+    }
+
+    public Utilisateur(String username, String password) {
+        this.username = username;
+        this.password = password;
+
     }
 
     public int getId() {
@@ -83,10 +90,15 @@ public class Utilisateur implements UserDetails {
         return true;
     }
 
-    public static UtilisateurDTO toUserDTO(Utilisateur utilisateur){
+    public static UtilisateurDTO toUserDTO(Utilisateur utilisateur) {
         return new UtilisateurDTO(utilisateur.getId(), utilisateur.getUsername(), utilisateur.getPassword());
     }
-    public static Utilisateur toUser(UtilisateurDTO utilisateurDTO){
+
+    public static Utilisateur toUser(UtilisateurDTO utilisateurDTO) {
         return new Utilisateur(utilisateurDTO.id(), utilisateurDTO.username(), utilisateurDTO.password());
+    }
+
+    public static Utilisateur toAuth(AuthentificationDTO authentificationDTO) {
+        return new Utilisateur(authentificationDTO.username(), authentificationDTO.password());
     }
 }

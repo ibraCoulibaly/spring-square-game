@@ -1,7 +1,10 @@
-package com.square.game.config;
+package com.square.game.security.config;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
@@ -16,12 +19,15 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
+    @Autowired
+    private AuthenticationConfiguration authenticationConfiguration;
     @Bean
     public SecurityFilterChain apiSecurity(HttpSecurity http) throws Exception {
         return http
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests((auth)->auth
-                        .requestMatchers("/subscribe").permitAll()
+                        .requestMatchers("/api/public/subscribe").permitAll()
+                        .requestMatchers("/api/public/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 .build();
@@ -35,6 +41,11 @@ public class SecurityConfig {
     @Bean
     public PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
+    }
+
+    @Bean
+    public AuthenticationManager authenticationManager() throws Exception {
+        return authenticationConfiguration.getAuthenticationManager();
     }
 
 }
