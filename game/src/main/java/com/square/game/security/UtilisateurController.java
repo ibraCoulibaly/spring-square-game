@@ -57,7 +57,7 @@ public class UtilisateurController {
 
         // Mettre le token dans le header 'Authorization'
 
-        return jwt;
+        return authenticationResponse.isAuthenticated()?jwt:null;
     }
 
     @GetMapping("/test")
