@@ -2,12 +2,12 @@ package com.square.game.security;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.parameters.P;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
@@ -29,20 +29,12 @@ public class UtilisateurController {
     }
 
     @PostMapping("/api/public/login")
-    public String getUser(@RequestBody UtilisateurDTO user){
+    public ResponseEntity<String> getUser(@RequestBody UtilisateurDTO user){
         UtilisateurDTO u = Utilisateur.toUserDTO(utilisateurService.loadUserByUsername(user.username()));
-
-        /*if(u.password().equals(passwordEncoder.encode(user.password())))
-            System.out.println("LOGGED IN"+u);
-        else
-            System.out.println("FAIL"+u+user+passwordEncoder.encode(user.password()));*/
-
         Authentication authenticationRequest =
                 UsernamePasswordAuthenticationToken.unauthenticated(user.username(), user.password());
         Authentication authenticationResponse =
                 this.authenticationManager.authenticate(authenticationRequest);
-
-
 
         // Générer le token
         Date now = new Date();
@@ -57,12 +49,11 @@ public class UtilisateurController {
 
         // Mettre le token dans le header 'Authorization'
 
-        return authenticationResponse.isAuthenticated()?jwt:null;
-    }
+        HttpHeaders responseHeaders = new HttpHeaders();
+        responseHeaders.set("Autorization",jwt);
 
-    @GetMapping("/test")
-    public void test(){
-
+        return ResponseEntity.ok()
+                .headers(responseHeaders).build();
     }
 
 

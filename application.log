@@ -484,3 +484,314 @@ java.lang.NullPointerException: Cannot invoke "org.springframework.security.cryp
 16:57:19.017 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 16:57:19.027 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 16:57:19.030 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+11:29:44.911 [main] INFO  com.square.game.GameApplication - Starting GameApplication using Java 21.0.2 with PID 12628 (C:\Users\ibrahima.coulibaly\Documents\JAVA_SPRING\game\game\target\classes started by ibrahima.coulibaly in C:\Users\ibrahima.coulibaly\Documents\JAVA_SPRING\game)
+11:29:44.913 [main] INFO  com.square.game.GameApplication - The following 1 profile is active: "h2s"
+11:29:46.474 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+11:29:46.542 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 57 ms. Found 2 JPA repository interfaces.
+11:29:47.088 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9090 (http)
+11:29:47.100 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+11:29:47.101 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+11:29:47.102 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.18]
+11:29:47.186 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+11:29:47.187 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2212 ms
+11:29:47.216 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+11:29:47.473 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+11:29:47.474 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+11:29:47.485 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+11:29:47.709 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+11:29:47.786 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+11:29:47.827 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+11:29:48.094 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+11:29:48.159 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+11:29:49.159 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+11:29:49.210 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+11:29:50.042 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+11:29:50.609 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+11:29:50.894 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@583b177a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4d79651d, org.springframework.security.web.context.SecurityContextHolderFilter@3d7d920b, org.springframework.security.web.header.HeaderWriterFilter@5910c67e, org.springframework.web.filter.CorsFilter@796d0b43, org.springframework.security.web.authentication.logout.LogoutFilter@7011eee0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4540aade, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@697797e4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@424ebf5b, org.springframework.security.web.access.ExceptionTranslationFilter@4434eb51, org.springframework.security.web.access.intercept.AuthorizationFilter@7b99e726]
+11:29:50.897 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/h2-console/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+11:29:50.897 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/h2-console/**']
+11:29:51.066 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+11:29:51.083 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9090 (http) with context path ''
+11:29:51.089 [main] INFO  com.square.game.GameApplication - Started GameApplication in 6.816 seconds (process running for 10.373)
+11:31:06.902 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+11:31:06.904 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+11:31:06.907 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+11:31:11.213 [main] INFO  com.square.game.GameApplication - Starting GameApplication using Java 21.0.2 with PID 15128 (C:\Users\ibrahima.coulibaly\Documents\JAVA_SPRING\game\game\target\classes started by ibrahima.coulibaly in C:\Users\ibrahima.coulibaly\Documents\JAVA_SPRING\game)
+11:31:11.217 [main] INFO  com.square.game.GameApplication - The following 1 profile is active: "h2s"
+11:31:11.788 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+11:31:11.837 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 43 ms. Found 2 JPA repository interfaces.
+11:31:12.302 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9090 (http)
+11:31:12.312 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+11:31:12.314 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+11:31:12.314 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.18]
+11:31:12.386 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+11:31:12.386 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1128 ms
+11:31:12.419 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+11:31:12.587 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+11:31:12.588 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+11:31:12.597 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+11:31:12.732 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+11:31:12.797 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+11:31:12.829 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+11:31:13.038 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+11:31:13.091 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+11:31:14.296 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+11:31:14.355 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+11:31:15.046 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+11:31:15.383 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+11:31:15.616 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@245b009a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@50ccd6a, org.springframework.security.web.context.SecurityContextHolderFilter@27ccf818, org.springframework.security.web.header.HeaderWriterFilter@69497a36, org.springframework.web.filter.CorsFilter@6bb2dae6, org.springframework.security.web.authentication.logout.LogoutFilter@41e156ee, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@30ee413a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7405e77f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@26c7940a, org.springframework.security.web.access.ExceptionTranslationFilter@415cb259, org.springframework.security.web.access.intercept.AuthorizationFilter@16ef07fa]
+11:31:15.621 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/h2-console/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+11:31:15.622 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/h2-console/**']
+11:31:15.829 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+11:31:15.844 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9090 (http) with context path ''
+11:31:15.851 [main] INFO  com.square.game.GameApplication - Started GameApplication in 5.274 seconds (process running for 6.197)
+11:31:52.648 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+11:31:52.651 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+11:31:52.654 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+11:31:55.167 [main] INFO  com.square.game.GameApplication - Starting GameApplication using Java 21.0.2 with PID 16412 (C:\Users\ibrahima.coulibaly\Documents\JAVA_SPRING\game\game\target\classes started by ibrahima.coulibaly in C:\Users\ibrahima.coulibaly\Documents\JAVA_SPRING\game)
+11:31:55.170 [main] INFO  com.square.game.GameApplication - The following 1 profile is active: "h2s"
+11:31:55.730 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+11:31:55.779 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 42 ms. Found 2 JPA repository interfaces.
+11:31:56.198 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9090 (http)
+11:31:56.208 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+11:31:56.209 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+11:31:56.209 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.18]
+11:31:56.254 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+11:31:56.254 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1038 ms
+11:31:56.277 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+11:31:56.444 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+11:31:56.445 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+11:31:56.454 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+11:31:56.595 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+11:31:56.642 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+11:31:56.669 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+11:31:56.848 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+11:31:56.883 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+11:31:57.531 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+11:31:57.580 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+11:31:58.191 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+11:31:58.567 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+11:31:59.034 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@39e0fe23, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@44f86613, org.springframework.security.web.context.SecurityContextHolderFilter@4ff1b0d, org.springframework.security.web.header.HeaderWriterFilter@30ee413a, org.springframework.web.filter.CorsFilter@5e05dd42, org.springframework.security.web.authentication.logout.LogoutFilter@2ab91b65, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1d3f5482, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@67e255cf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@246701d5, org.springframework.security.web.access.ExceptionTranslationFilter@27ccf818, org.springframework.security.web.access.intercept.AuthorizationFilter@26c7940a]
+11:31:59.045 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/h2-console/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+11:31:59.045 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/h2-console/**']
+11:31:59.416 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+11:31:59.432 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9090 (http) with context path ''
+11:31:59.438 [main] INFO  com.square.game.GameApplication - Started GameApplication in 4.552 seconds (process running for 5.297)
+11:32:18.947 [http-nio-9090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+11:32:18.947 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+11:32:18.948 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+11:38:04.899 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+11:38:04.902 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+11:38:04.906 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+11:40:49.182 [main] INFO  com.square.game.GameApplication - Starting GameApplication using Java 21.0.2 with PID 14596 (C:\Users\ibrahima.coulibaly\Documents\JAVA_SPRING\game\game\target\classes started by ibrahima.coulibaly in C:\Users\ibrahima.coulibaly\Documents\JAVA_SPRING\game)
+11:40:49.186 [main] INFO  com.square.game.GameApplication - The following 1 profile is active: "h2s"
+11:40:49.770 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+11:40:49.819 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 42 ms. Found 2 JPA repository interfaces.
+11:40:50.232 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9090 (http)
+11:40:50.240 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+11:40:50.242 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+11:40:50.242 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.18]
+11:40:50.294 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+11:40:50.294 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1051 ms
+11:40:50.315 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+11:40:50.521 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+11:40:50.522 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+11:40:50.531 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+11:40:50.697 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+11:40:50.758 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+11:40:50.793 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+11:40:51.065 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+11:40:51.136 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+11:40:51.894 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+11:40:51.937 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+11:40:52.567 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+11:40:53.012 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+11:40:53.415 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@26c7940a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5a640f98, org.springframework.security.web.context.SecurityContextHolderFilter@7405e77f, org.springframework.security.web.header.HeaderWriterFilter@27ccf818, org.springframework.web.filter.CorsFilter@39e0fe23, org.springframework.security.web.authentication.logout.LogoutFilter@70bbc163, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4ff1b0d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@46da7d39, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@44f86613, org.springframework.security.web.access.ExceptionTranslationFilter@497f8a4b, org.springframework.security.web.access.intercept.AuthorizationFilter@50ccd6a]
+11:40:53.418 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/h2-console/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+11:40:53.419 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/h2-console/**']
+11:40:53.621 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+11:40:53.640 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9090 (http) with context path ''
+11:40:53.647 [main] INFO  com.square.game.GameApplication - Started GameApplication in 4.773 seconds (process running for 5.552)
+11:41:06.802 [http-nio-9090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+11:41:06.803 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+11:41:06.804 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+13:14:31.506 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=29m39s923ms755µs200ns).
+13:34:30.656 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m59s123ms543µs900ns).
+13:44:28.003 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+13:44:28.056 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+13:44:28.076 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+13:44:35.758 [main] INFO  com.square.game.GameApplication - Starting GameApplication using Java 21.0.2 with PID 13916 (C:\Users\ibrahima.coulibaly\Documents\JAVA_SPRING\game\game\target\classes started by ibrahima.coulibaly in C:\Users\ibrahima.coulibaly\Documents\JAVA_SPRING\game)
+13:44:35.761 [main] INFO  com.square.game.GameApplication - The following 1 profile is active: "h2s"
+13:44:36.525 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+13:44:36.580 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 45 ms. Found 2 JPA repository interfaces.
+13:44:37.012 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9090 (http)
+13:44:37.021 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+13:44:37.023 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+13:44:37.023 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.18]
+13:44:37.070 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+13:44:37.070 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1269 ms
+13:44:37.092 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+13:44:37.273 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+13:44:37.274 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+13:44:37.282 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+13:44:37.428 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+13:44:37.491 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+13:44:37.525 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+13:44:37.749 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+13:44:37.792 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+13:44:38.496 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+13:44:38.541 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+13:44:39.298 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+13:44:39.696 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+13:44:39.913 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@32d11a5c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@43ac3b45, org.springframework.security.web.context.SecurityContextHolderFilter@7c5eb88c, org.springframework.security.web.header.HeaderWriterFilter@627222d8, org.springframework.web.filter.CorsFilter@5ded2dfc, org.springframework.security.web.authentication.logout.LogoutFilter@30ee413a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7f0b32c0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6c152246, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@22ac1a0d, org.springframework.security.web.access.ExceptionTranslationFilter@19266ca3, org.springframework.security.web.access.intercept.AuthorizationFilter@393b99d]
+13:44:39.917 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/h2-console/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+13:44:39.917 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/h2-console/**']
+13:44:40.143 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+13:44:40.161 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9090 (http) with context path ''
+13:44:40.169 [main] INFO  com.square.game.GameApplication - Started GameApplication in 4.754 seconds (process running for 6.333)
+13:44:46.430 [http-nio-9090-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:44:46.430 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+13:44:46.431 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+13:58:45.663 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+13:58:45.666 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+13:58:45.668 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+09:21:51.704 [main] INFO  com.square.game.GameApplication - Starting GameApplication using Java 21.0.2 with PID 15960 (C:\Users\ibrahima.coulibaly\Documents\JAVA_SPRING\game\game\target\classes started by ibrahima.coulibaly in C:\Users\ibrahima.coulibaly\Documents\JAVA_SPRING\game)
+09:21:51.708 [main] INFO  com.square.game.GameApplication - The following 1 profile is active: "h2s"
+09:21:52.826 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+09:21:52.896 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 61 ms. Found 2 JPA repository interfaces.
+09:21:53.364 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9090 (http)
+09:21:53.374 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+09:21:53.376 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+09:21:53.376 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.18]
+09:21:53.427 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+09:21:53.427 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1653 ms
+09:21:53.451 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+09:21:53.634 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+09:21:53.636 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+09:21:53.644 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+09:21:53.801 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+09:21:53.865 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+09:21:53.901 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+09:21:54.136 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+09:21:54.180 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+09:21:54.922 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+09:21:54.976 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+09:21:55.405 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+09:21:55.792 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+09:21:56.010 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3020f22, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6a40e660, org.springframework.security.web.context.SecurityContextHolderFilter@7ba70b3b, org.springframework.security.web.header.HeaderWriterFilter@498102a4, org.springframework.web.filter.CorsFilter@4a57ad67, org.springframework.security.web.authentication.logout.LogoutFilter@5ea24702, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@269a37bc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@106e816c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1f1b69bb, org.springframework.security.web.access.ExceptionTranslationFilter@75dc995f, org.springframework.security.web.access.intercept.AuthorizationFilter@70ba01be]
+09:21:56.015 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/h2-console/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+09:21:56.015 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/h2-console/**']
+09:21:56.181 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+09:21:56.195 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9090 (http) with context path ''
+09:21:56.201 [main] INFO  com.square.game.GameApplication - Started GameApplication in 4.931 seconds (process running for 8.36)
+09:24:51.323 [http-nio-9090-exec-3] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+09:24:51.323 [http-nio-9090-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+09:24:51.325 [http-nio-9090-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+09:25:33.891 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+09:25:33.895 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+09:25:33.897 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+09:25:37.914 [main] INFO  com.square.game.GameApplication - Starting GameApplication using Java 21.0.2 with PID 11568 (C:\Users\ibrahima.coulibaly\Documents\JAVA_SPRING\game\game\target\classes started by ibrahima.coulibaly in C:\Users\ibrahima.coulibaly\Documents\JAVA_SPRING\game)
+09:25:37.917 [main] INFO  com.square.game.GameApplication - The following 1 profile is active: "h2s"
+09:25:38.477 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+09:25:38.527 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 44 ms. Found 2 JPA repository interfaces.
+09:25:39.001 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9090 (http)
+09:25:39.009 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+09:25:39.011 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+09:25:39.011 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.18]
+09:25:39.057 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+09:25:39.057 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1098 ms
+09:25:39.085 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+09:25:39.259 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+09:25:39.260 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+09:25:39.269 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+09:25:39.417 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+09:25:39.484 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+09:25:39.518 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+09:25:39.732 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+09:25:39.780 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+09:25:40.492 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+09:25:40.534 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+09:25:41.182 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+09:25:41.533 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+09:25:41.716 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5e05dd42, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@246701d5, org.springframework.security.web.context.SecurityContextHolderFilter@1d3f5482, org.springframework.security.web.header.HeaderWriterFilter@3449cddf, org.springframework.web.filter.CorsFilter@1ac8f29c, org.springframework.security.web.authentication.logout.LogoutFilter@109db924, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1bb90d4d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@e1f88b6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1d07d728, org.springframework.security.web.access.ExceptionTranslationFilter@30ee413a, org.springframework.security.web.access.intercept.AuthorizationFilter@39e0fe23]
+09:25:41.720 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/h2-console/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+09:25:41.720 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/h2-console/**']
+09:25:41.872 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+09:25:41.886 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9090 (http) with context path ''
+09:25:41.892 [main] INFO  com.square.game.GameApplication - Started GameApplication in 4.332 seconds (process running for 5.453)
+09:25:56.201 [http-nio-9090-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+09:25:56.201 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+09:25:56.202 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+09:29:27.666 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+09:29:27.670 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+09:29:27.673 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+09:29:30.557 [main] INFO  com.square.game.GameApplication - Starting GameApplication using Java 21.0.2 with PID 4308 (C:\Users\ibrahima.coulibaly\Documents\JAVA_SPRING\game\game\target\classes started by ibrahima.coulibaly in C:\Users\ibrahima.coulibaly\Documents\JAVA_SPRING\game)
+09:29:30.560 [main] INFO  com.square.game.GameApplication - The following 1 profile is active: "h2s"
+09:29:31.157 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+09:29:31.209 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 42 ms. Found 2 JPA repository interfaces.
+09:29:31.795 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9090 (http)
+09:29:31.804 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+09:29:31.805 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+09:29:31.805 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.18]
+09:29:31.852 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+09:29:31.852 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1244 ms
+09:29:31.884 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+09:29:32.060 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+09:29:32.061 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+09:29:32.069 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+09:29:32.212 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+09:29:32.275 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+09:29:32.309 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+09:29:32.522 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+09:29:32.568 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+09:29:33.294 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+09:29:33.336 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+09:29:33.927 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+09:29:34.264 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+09:29:34.462 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@245b009a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@50ccd6a, org.springframework.security.web.context.SecurityContextHolderFilter@27ccf818, org.springframework.security.web.header.HeaderWriterFilter@69497a36, org.springframework.web.filter.CorsFilter@6bb2dae6, org.springframework.security.web.authentication.logout.LogoutFilter@41e156ee, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@30ee413a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7405e77f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@26c7940a, org.springframework.security.web.access.ExceptionTranslationFilter@415cb259, org.springframework.security.web.access.intercept.AuthorizationFilter@16ef07fa]
+09:29:34.466 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/h2-console/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+09:29:34.467 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/h2-console/**']
+09:29:34.620 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+09:29:34.635 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9090 (http) with context path ''
+09:29:34.641 [main] INFO  com.square.game.GameApplication - Started GameApplication in 4.448 seconds (process running for 5.385)
+09:29:36.699 [http-nio-9090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+09:29:36.699 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+09:29:36.702 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+09:34:29.465 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+09:34:29.466 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+09:34:29.468 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+09:34:33.996 [main] INFO  com.square.game.GameApplication - Starting GameApplication using Java 21.0.2 with PID 5900 (C:\Users\ibrahima.coulibaly\Documents\JAVA_SPRING\game\game\target\classes started by ibrahima.coulibaly in C:\Users\ibrahima.coulibaly\Documents\JAVA_SPRING\game)
+09:34:34.000 [main] INFO  com.square.game.GameApplication - The following 1 profile is active: "h2s"
+09:34:34.550 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+09:34:34.597 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 41 ms. Found 2 JPA repository interfaces.
+09:34:34.986 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9090 (http)
+09:34:34.993 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+09:34:34.994 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+09:34:34.995 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.18]
+09:34:35.037 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+09:34:35.037 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 991 ms
+09:34:35.061 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+09:34:35.211 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+09:34:35.212 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+09:34:35.220 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+09:34:35.350 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+09:34:35.395 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+09:34:35.421 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+09:34:35.633 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+09:34:35.670 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+09:34:36.303 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+09:34:36.344 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+09:34:36.905 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+09:34:37.226 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+09:34:37.409 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6bb2dae6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@26c7940a, org.springframework.security.web.context.SecurityContextHolderFilter@30ee413a, org.springframework.security.web.header.HeaderWriterFilter@6d952747, org.springframework.web.filter.CorsFilter@5a640f98, org.springframework.security.web.authentication.logout.LogoutFilter@5522f9b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3449cddf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4ff1b0d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@39e0fe23, org.springframework.security.web.access.ExceptionTranslationFilter@69497a36, org.springframework.security.web.access.intercept.AuthorizationFilter@245b009a]
+09:34:37.412 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/h2-console/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+09:34:37.412 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/h2-console/**']
+09:34:37.574 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+09:34:37.590 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9090 (http) with context path ''
+09:34:37.596 [main] INFO  com.square.game.GameApplication - Started GameApplication in 4.022 seconds (process running for 4.795)
+09:34:41.165 [http-nio-9090-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+09:34:41.165 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+09:34:41.166 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+09:38:00.549 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+09:38:00.555 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+09:38:00.557 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
